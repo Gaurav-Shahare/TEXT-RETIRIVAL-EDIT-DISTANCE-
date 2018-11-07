@@ -1,0 +1,31 @@
+
+Main script
+EDIT DISTANCE
+
+PSEUDO CODE
+
+For finding edit distance between two string, I have used  dynamic  programming paradigm
+
+Let say two strings be A and B and i,j be the pointers pointing characters of them
+edit(i,j) represents edit distance of string A[0,1,...i] and B[0,1,...j]
+If(A[i]==B[j])
+edit(i,j) =edit(i-1,j-1)
+Else
+edit(i,j)=1+min(A,B,C )
+Where A=edit(i-1,j-1) // replace char j of string B
+B=edit(i-1,j) // insert char at pos j of string B
+C=edit(i,j-1) // delete char at pos j of string C
+
+
+Finding thd edit distance between text all the given words would be costly so, I used ​ Trie​​ Data
+Structure (This handel's punctuations and Capital word )
+If edit distance between given text and some node j is less than two :
+Print out all the children recursively from that node
+Else:
+Recursively find the node having the edit distance less than two
+
+
+Further work
+1) Time complexity can be further improved by adding few parameters to Trie
+Example pointer to siblings
+2) Whitespace handling
