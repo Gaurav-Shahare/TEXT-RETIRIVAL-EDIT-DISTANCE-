@@ -1,9 +1,9 @@
-
+#python 2.7
 import numpy as np
 import string 
 class TrieNode:
-    def __init__(self):
-        self.children=[None]*26
+    def __init__(self):  #Trie Data Strucuture
+        self.children=[None]*26 
         self.endword=False
         self.count=0
 
@@ -15,7 +15,7 @@ class Trie:
     def getnode(self):
         return TrieNode()
 
-    def chartoint(self,temp):
+    def chartoint(self,temp):  
         return ord(temp)-ord('a')
 
     def insert(self,word):
@@ -118,12 +118,12 @@ class Trie:
 
 def main():
     x=raw_input("Enter query\n")
-    crimefile = open('test.txt', 'r')
+    crimefile = open('test.txt', 'r')  #input the stored data
     yourResult = [line.split(',') for line in crimefile.readlines()]
     t=Trie()
     
     for i in yourResult[0]:
-        t.insert(i)
+        t.insert(i)  #insert all the data
    # x =input("")
     t.findoccurance(x)
     
