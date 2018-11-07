@@ -123,7 +123,7 @@ def main():
     t=Trie()
     
     for i in yourResult[0]:
-        t.insert(i)  #insert all the data
+        t.insert(i)  #insert stored the data
    # x =input("")
     t.findoccurance(x)
     
